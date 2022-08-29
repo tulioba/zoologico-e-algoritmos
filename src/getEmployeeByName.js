@@ -1,7 +1,7 @@
 const { species, employees } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
-console.log(species)
+console.log(species);
 function getEmployeeByName(employeeName) {
   const e = employees.find((w) => w.firstName === employeeName || w.lastName === employeeName);
   if (typeof employeeName === 'undefined') {
