@@ -10,7 +10,6 @@ function getAnimalsOlderThan(animal, age) {
   return false;
 }
 
-// console.log(getAnimalsOlderThan("lions", 5));
 console.log(getAnimalsOlderThan('otters', 20));
 module.exports = getAnimalsOlderThan;
 
