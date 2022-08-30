@@ -3,14 +3,13 @@ const data = require('../data/zoo_data');
 
 console.log(species);
 function getEmployeeByName(employeeName) {
-  const e = employees.find((w) => w.firstName === employeeName || w.lastName === employeeName);
-  if (typeof employeeName === 'undefined') {
-    return {};
-  }
+  if (!employeeName) return {};
+  const e = employees
+    .find((w) => w.firstName === employeeName || w.lastName === employeeName);
   return e;
 }
 
-console.log(getEmployeeByName('Nigel'));
+console.log(getEmployeeByName());
 module.exports = getEmployeeByName;
 
 // A função deve retornar um objeto vazio caso não receba parâmetros;
