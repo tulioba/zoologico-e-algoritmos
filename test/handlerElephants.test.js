@@ -24,7 +24,13 @@ describe('Testes da função HandlerElephants', () => {
   test('testa se retorna um array com a relação de dias em que é possível visitar os elefantes', () => {
     expect(handlerElephants('availability')).toEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
   });
-  test('testa se função exige string como parametro', () => {
+  test('testa se tem output null se o parametro é string', () => {
     expect(handlerElephants('undefined')).toBe(null);
+  });
+  test('testa se ', () => {
+    expect(handlerElephants(undefined)).toBe(undefined);
+  });
+  test('testa se ', () => {
+    expect(handlerElephants(2222)).toBe('Parâmetro inválido, é necessário uma string');
   });
 });
