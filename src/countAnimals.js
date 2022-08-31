@@ -8,17 +8,14 @@ function countAnimals(animal) {
       return acc;
     }, {});
   }
-
-  if (animal) {
-    const specieAnimal = species.filter((specie) => specie.name === animal.specie);
-    const animalAmount = specieAnimal.map((specie) => specie.residents).flat();
-    return animalAmount.reduce((acc, curr) => {
-      if (curr.sex === animal.sex || !animal.sex) {
-        acc = acc + 1;
-      }
-      return acc;
-    }, 0);
-  }
+  const specieAnimal = species.filter((specie) => specie.name === animal.specie);
+  const animalAmount = specieAnimal.map((specie) => specie.residents).flat();
+  return animalAmount.filter((curr) => {
+    if (curr.sex === animal.sex || !animal.sex) {
+      return true;
+    }  
+    return false;
+  }).length;
 }
 console.log(countAnimals({ specie: 'giraffes', sex: 'female' }));
 
