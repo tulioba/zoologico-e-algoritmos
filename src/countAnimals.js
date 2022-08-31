@@ -14,7 +14,7 @@ function countAnimals(animal) {
     const animalAmount = specieAnimal.map((specie) => specie.residents).flat();
     return animalAmount.reduce((acc, curr) => {
       if (curr.sex === animal.sex || !animal.sex) {
-        acc += 1;
+        acc = acc + 1;
       }
       return acc;
     }, 0);
