@@ -19,20 +19,6 @@ function countAnimals(animal) {
       return acc;
     }, 0);
   }
-
-  //   if (animal.specie) {
-  //     const specieAnimal = species.filter((specie) =>  specie.name === animal.specie);
-  //     const animalAmount2 = specieAnimal.map((specie) => specie.residents).flat();
-  //     return animalAmount2.length
-
-  //   }
-  // const specieAnimal = species.find((specie) => specie.name === animal.specie);
-  // if(animal.sex) {
-  //   return specieAnimal.residents.filter((resident) => resident.sex === animal.sex).length
-  // }
-  // else {
-  //   return specieAnimal.residents.length
-  // }
 }
 console.log(countAnimals({ specie: 'giraffes', sex: 'female' }));
 
