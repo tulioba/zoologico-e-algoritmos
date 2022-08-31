@@ -13,7 +13,7 @@ function countAnimals(animal) {
   return animalAmount.filter((curr) => {
     if (curr.sex === animal.sex || !animal.sex) {
       return true;
-    }  
+    }
     return false;
   }).length;
 }
